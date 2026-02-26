@@ -1,0 +1,45 @@
+## Comandos Básicos HUAWEI ##
+
+system-view (sys): Entra no modo de configuração de sistema (modo de configuração global)
+
+display this (dis th): Exibe a configuração do contexto atual (muito útil dentro de uma interface). 
+
+display current-configuration (dis cur): Exibe a configuração que está rodando no momento.
+
+ip pool [nome do DHCP]: criar o pool DHCP
+display interface brief: mostrar informações sobre as interfaces
+display ip pool: mostras as pools
+undo ip pool [nome-do-pool]: excluir pool
+reset ip pool name [nome-do-pool] all: Limpar/Resetar um IP Pool (remover IPs atribuídos, mas manter o pool)
+
+
+stp mode stp: habilitar o STP
+display bridge mac-address: mostra o endereço mac do SW.
+display stp: mostra todas as informações STP.
+display stp brief: ver todas as interfaces que stão no STP.
+
+---
+Hotkeys do eNSP:
+Ctl+L: mostra/oculta o painel lateral.
+
+display vlan (dis vl): Exibe as informações das VLANs configuradas.
+
+display ip routing-table: Exibe  a tabela de roteamento do roteador.
+
+quit (q): Retorna ao modo de visualização anterior.
+
+interface [nome-interface]: Entra no modo de configuração de uma interface (ex: interface GigabitEthernet 0/0/1).
+----
+vlan (ID): cria a vlan no switch (fora das portas).
+description: descrição, um nome para a porta.
+port link-type access: (dentro da porta) define o tipo de VLAN como access na porta.
+port default vlan (ID): (dentro da porta) permite a passagem da VLAN ID especificada
+port link-type trunk: (dentro da porta) define o tipo de VLAN como trunk na porta.
+undo port trunk allow-pass vlan 1: (dentro da porta) retira a VLAN Default (VLAN ID 1) do switch para evitar loop na porta trunk.
+port trunk allow-pass vlan (ID): (dentro da porta) permite a passagem da VLAN ID na porta trunk.
+
+reboot: Reinicia o equipamento.
+
+display interface [interface-type interface-number]: Exibe detalhes sobre uma ou todas as interfaces.
+
+debugging [comando]: Habilita o modo de depuração para troubleshooting.
